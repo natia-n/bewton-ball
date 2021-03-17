@@ -2,9 +2,9 @@
     width: 300px;
     height: 250px;    
     margin: 50px auto;
-    border-top: 7px solid black;
-    border-left: 7px solid black;
-    border-right: 7px solid black;
+    border-top: 7px solid #15158f;
+    border-left: 7px solid #15158f;
+    border-right: 7px solid #15158f;
     border-radius: 7px;
     display: flex;
     justify-content: center;
@@ -14,20 +14,23 @@
 .container .ball-cotainer{
     text-align: center;
     margin-top: -1px;
+    margin-right: -6px;
 }
 
 .container .ball-cotainer .rope{
     display: inline-block;
     width: 4px;
     height: 150px;    
-    background-color: black;
+    background-color: #15158f;
 }
 
 .container .ball-cotainer .ball{
-    width: 50px;
-    height: 50px;    
-    background-color: black;
-    border-radius: 50%;
+    margin-top: -3px;
+    position: relative;
+}
+
+.container .ball-cotainer .ball img{
+    width: 60px;    
 }
 
 @keyframes move-last{
@@ -42,7 +45,7 @@
     }
 
     to {
-        transform: rotate(-30deg);
+        transform: rotate(-45deg);
         transform-origin: top;
     }
 }
@@ -58,22 +61,18 @@
         transform-origin: top;
     }
 
-
     100% {
-        transform: rotate(30deg);
+        transform: rotate(45deg);
         transform-origin: top;
     }
 }
 
 .container .ball-cotainer.last{
-    /* transform-origin: top;
-    transform: rotate(-30deg); */
     animation-name: move-last;
     animation-duration: 1s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
-
 
 .container .ball-cotainer.first{
     animation-name: move-first;
